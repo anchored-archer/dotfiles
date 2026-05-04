@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions history-substring-search fzf  zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,3 +115,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Created by `pipx` on 2026-02-06 11:35:04
 export PATH="$PATH:/home/wanderer/.local/bin"
+
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY
